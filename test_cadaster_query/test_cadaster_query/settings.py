@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "drf_yasg",
     "requests",
 ]
 
@@ -67,9 +68,6 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -97,3 +95,6 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CSRF_COOKIE_HTTPONLY = True
+CSRF_COOKIE_SECURE = True
